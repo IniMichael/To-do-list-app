@@ -1,0 +1,173 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #10a6cb, #002765);;
+    padding: 10px;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 100px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.text{
+    color: #002765;
+    margin-bottom: 20px;
+    font-family: 'Patua One', cursive;
+}
+
+.text span{
+    color: #10a6cb;
+}
+
+.form{
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+#todo-input{
+    width: 425px;
+    height: 40px;
+    background: #edeef0;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+ }
+
+.todo-btn{
+    border: none;
+    outline: none;
+    background: linear-gradient( #002765, #0244af, #002765);
+    color: #fff;
+    font-size: 12px;
+    font-weight:600;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
+    float: right;
+}
+
+.todo-btn:hover{
+    background: linear-gradient( #10a6cb, #0244af, #10a6cb);
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+.check{
+    background: linear-gradient( #002765, #0244af, #002765);
+    height: 30px;
+    width: 33px;
+}
+
+.check:hover{
+    background: linear-gradient( #10a6cb, #0244af, #10a6cb);
+}
+
+.trash{
+    background: linear-gradient( #002765, #0244af, #002765);
+    height: 30px;
+    width: 33px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 2px;
+}
+
+.trash:hover{
+    background: linear-gradient( #10a6cb, #0244af, #10a6cb);
+}
+
+.todoDiv{
+    background-color: white;
+    margin: 0.5rem;
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.todoDiv li{
+    flex: 1;
+    padding: 0 10px;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.todoContainer{
+    background-color: #f4f4f4;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.trash, .check{
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 320px) {
+    
+    #todo-input{
+        width: 245px;
+        height: 40px;
+        background: #edeef0;
+        padding-left: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+     }
+
+     .container{
+        width: 100%;
+        max-width: 330px;
+        background: #fff;
+        margin: 100px auto;
+        padding: 40px 15px 70px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 555px) {
+    #todo-input{
+        width: 245px;
+        height: 40px;
+        background: #edeef0;
+        padding-left: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+     }
+
+     .container{
+        width: 100%;
+        max-width: 330px;
+        background: #fff;
+        margin: 100px auto;
+        padding: 40px 15px 70px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}
