@@ -1,7 +1,7 @@
 // GETTING SELECTORS
 const todoInput = document.querySelector('#todo-input');
 const todoBtn = document.querySelector('.todo-btn');
-const todoList = document.querySelector('.todo-list');
+const todoList = document.querySelector('#todoList');
 const form = document.querySelector('form');
 let todos = [];
 // Events
@@ -18,6 +18,18 @@ form.addEventListener('submit', function (event) {
   todoInput.value = '';
   renderTodos(todos);
 });
+
+// Function to delete a todo item
+const deleteTodoItem = (todoItem) => {
+  todos = todos.filter((item) => item !== todoItem);
+  renderTodos(todos);
+};
+// Function to toggle the completion status of a todo item
+const toggleTodoCompletion = (todoItem) => {
+  todoItem.completed = !todoItem.completed;
+  renderTodos(todos);
+};
+
 // A function that renders todos
 const renderTodos = (arr) => {
   // Clear existing todos
@@ -55,17 +67,17 @@ const renderTodos = (arr) => {
     checkButton.addEventListener('click', function () {
       toggleTodoCompletion(todoItem);
     });
+
+    const completedStyle = {
+      textDecoration: 'line-through',
+    };
+
+    // Apply completed style if the todo item is completed
+    if (todoItem.completed) {
+      li.style.textDecoration = completedStyle.textDecoration;
+    }
+
     // Append todoDiv to todoList
     todoList.appendChild(todoDiv);
   }
-};
-// Function to delete a todo item
-const deleteTodoItem = (todoItem) => {
-  todos = todos.filter((item) => item !== todoItem);
-  renderTodos(todos);
-};
-// Function to toggle the completion status of a todo item
-const toggleTodoCompletion = (todoItem) => {
-  todoItem.completed = !todoItem.completed;
-  renderTodos(todos);
 };
